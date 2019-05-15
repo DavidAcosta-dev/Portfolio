@@ -1,0 +1,65 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url("https://us.123rf.com/450wm/belchonoksun/belchonoksun1603/belchonoksun160300034/53040654-cosmic-vector-endless-seamless-pattern-with-stars-and-constellations-in-open-outer-space.jpg?ver=6");
+    background-image: cover;
+}
+
+main{
+    
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    
+    
+}
+
+nav {
+    border: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-self: end
+    
+}
+
+nav a {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid red;
+    color: white;
+}
+
+.avatar-container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar {
+    border: 1px solid blue;
+    border-radius: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 30px;
+    min-height: auto;
+    box-shadow: inset -40px 0px 0px #d8e8f7,
+        inset 20px 0px 0px #ffffff, 
+        inset -50px 0px 0px 35px #e2eefa, 
+        0px 0px 0px 60px rgba(255, 255, 255, 0.05), 
+        0px 0px 0px 80px rgba(255, 255, 255, 0.025), 
+        0px 0px 0px 100px rgba(255, 255, 255, 0.0125);
+}
+
+
+
+
+
+
+
+
+
