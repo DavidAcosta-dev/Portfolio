@@ -30,7 +30,7 @@ main{
 }
 
 nav {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -42,7 +42,7 @@ nav a {
     line-height: 1.5;
     margin-left: 5px;
     margin-right: 5px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     color: white;
 }
 
@@ -73,7 +73,9 @@ nav a {
 
 
 .bio {
+    border-radius: 13px;
     text-align: left;
+    background-color: rgba(98, 0, 255, 0.144)
 }
 
 .bio h2 {
@@ -106,7 +108,7 @@ p, h3, h4 {
     font-weight: bold;
     text-decoration: underline;
     color: rgb(0, 99, 0);
-    font-size: large;
+    font-size: xx-large;
 }
 
 .date {
