@@ -9,10 +9,14 @@ body {
     padding: 0;
     display: flex;
     font-family: 'Comfortaa', cursive; 
-    background-image: url("https://us.123rf.com/450wm/belchonoksun/belchonoksun1603/belchonoksun160300034/53040654-cosmic-vector-endless-seamless-pattern-with-stars-and-constellations-in-open-outer-space.jpg?ver=6");
-    background-image: cover;
+    background-image: url("https://art4clip.com/images/campfire-clipart-animated-gif-20.gif"), url("https://www.pngkey.com/png/full/765-7653840_euclidean-vector-angle-forest-night-free-frame-clipart.png"),
+                      url("https://i.redd.it/1htvyw5zhum11.png");
+    background-position: bottom, bottom , top;
+    background-repeat:no-repeat, no-repeat, repeat;
+    background-size: 30%, auto 80%, auto;
     text-align: center;
     line-height: 1.5;
+     
 }
 
 main{
@@ -105,7 +109,7 @@ footer {
 .bio {
     border-radius: 13px;
     text-align: left;
-    background-color: rgba(98, 0, 255, 0.144)
+    background-color: rgba(0, 0, 0, 0.68);
 }
 
 .bio h2 {
@@ -125,6 +129,9 @@ footer {
     font-family: 'Pacifico', cursive;
     font-size:1.66rem;
     text-shadow: 0 0 7px #f5f1f1;
+    display: block;
+    text-align: left;
+    
 }
 
 h1 {
@@ -179,7 +186,7 @@ p, h3, h4 {
     font-size:2.2rem;
 
     }
-    
+
     h3 {
         font-size:2rem;
     }
@@ -215,6 +222,10 @@ p, h3, h4 {
 
     nav {
         flex-direction:row;
+        justify-content: space-evenly;
+        margin-top: 85px;
+        margin-bottom: 50px;
+        
     }
 }
 
