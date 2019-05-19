@@ -1,85 +1,247 @@
-<!DOCTYPE html>
 <html lang="en"><head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>David Acosta | Portfolio</title>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Acosta | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"> <!--normalize the CSS-->
+    <link href="main.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <svg  class="bubbles" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 888">
+        <g transform="">
+          <defs>
+            <filter id="blur-nq4q5u6dq7r-1" x="-1" y="-1" width="3" height="3">
+              <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+            </filter>
+            <filter id="blur-nq4q5u6dq7r-2" x="-1" y="-1" width="3" height="3">
+              <feGaussianBlur stdDeviation="1.5"></feGaussianBlur>
+            </filter>
+            <filter id="blur-nq4q5u6dq7r-3" x="-1" y="-1" width="3" height="3">
+              <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+            </filter>
+
+
+            <filter id="red-glow" filterUnits="userSpaceOnUse"
+            x="-50%" y="-50%" width="200%" height="200%">
+       <!-- blur the text at different levels-->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur5"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur10"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur20"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="30" result="blur30"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="50" result="blur50"/>
+      <!-- merge all the blurs except for the first one -->
+      <feMerge result="blur-merged">
+        <feMergeNode in="blur10"/>
+        <feMergeNode in="blur20"/>
+        <feMergeNode in="blur30"/>
+        <feMergeNode in="blur50"/>
+      </feMerge>
+      <!-- recolour the merged blurs red-->
+      <feColorMatrix result="red-blur" in="blur-merged" type="matrix"
+                     values="1 0 0 0 0
+                             0 0.06 0 0 0
+                             0 0 0.44 0 0
+                             0 0 0 1 0" />
+      <feMerge>
+        <feMergeNode in="red-blur"/>       <!-- largest blurs coloured red -->
+        <feMergeNode in="blur5"/>          <!-- smallest blur left white -->
+        <feMergeNode in="SourceGraphic"/>  <!-- original white text -->
+      </feMerge>
+    </filter>
+
+
+
+
+
+          </defs>
         
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"> <!--normalize the CSS-->
-        <link href="main.css" rel="stylesheet" type="text/css">
-    </head>
-    
-    <body>
-    
-    
-        <main role="main" class="site">
-    
-            <div class="avatar-container">
-                <img class="avatar" src="https://image.shutterstock.com/image-vector/man-sitting-on-office-chair-450w-434344822.jpg">
+          <circle id="testBubble" cx="1764.232509159011" cy="0" transform="translate(0 870.628)" r="36.58274441974682" fill="#ddeeff" opacity="0.36800000000000005">
+            <animateTransform attributeName="transform" type="translate" begin="-4.271294670280647s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 924.5827444197469;0 -36.58274441974682"></animateTransform>
+          </circle><circle cx="1485.5958598834236" cy="0" transform="translate(0 117.017)" r="21.438466416902223" fill="#bbddff" opacity="0.322">
+            <animateTransform attributeName="transform" type="translate" begin="-5.743032400581409s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 909.4384664169022;0 -21.438466416902223"></animateTransform>
+          </circle><circle cx="1530.1635428704237" cy="0" transform="translate(0 819.205)" r="31.156222292978573" fill="#aabbcc" opacity="0.36800000000000005">
+            <animateTransform attributeName="transform" type="translate" begin="-4.598249983008675s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 919.1562222929786;0 -31.156222292978573"></animateTransform>
+          </circle><circle cx="973.5196857086279" cy="0" transform="translate(0 719.461)" r="18.420305080768912" fill="#ddeeff" opacity="0.18400000000000002">
+            <animateTransform attributeName="transform" type="translate" begin="-1.2734481741151213s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 906.4203050807689;0 -18.420305080768912"></animateTransform>
+          </circle><circle cx="1083.5557354676364" cy="0" transform="translate(0 476.611)" r="23.27029147153026" fill="#aabbcc" opacity="0.322">
+            <animateTransform attributeName="transform" type="translate" begin="-1.8814476581790405s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 911.2702914715303;0 -23.27029147153026"></animateTransform>
+          </circle><circle cx="250.19829665568565" cy="0" transform="translate(0 370.247)" r="27.5741100180322" fill="#aabbcc" opacity="0.322">
+            <animateTransform attributeName="transform" type="translate" begin="-3.0123881848729637s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 915.5741100180322;0 -27.5741100180322"></animateTransform>
+          </circle><circle cx="1749.5115423785578" cy="0" transform="translate(0 125.247)" r="13.157957681255358" fill="#bbddff" opacity="0.18400000000000002">
+            <animateTransform attributeName="transform" type="translate" begin="-14.202892945155078s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.1579576812553;0 -13.157957681255358"></animateTransform>
+          </circle>
+        </g>
+    </svg>
+
+
+<script>
+
+    var emberAnim = $('#testBubble');
+
+        function runColorsAnm(){
+
+        $({'r':0,'g':102,'b':0, opacity:0.1}).animate({'r':255,'g':60,'b':0, opacity: 0.5},{queue:false,duration:1000, easing:'swing',
+          step: function(now) {
+            emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
+            emberAnim.css({opacity:this.opacity});
+          }, complete:function(){
+            $({'r':255,'g':255,'b':255, opacity: 0.2}).animate({'r':255,'g':0,'b':0, opacity: 0.9},{queue:false,duration:2000, easing:'swing',
+              step: function(now) {
+                  emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
+                  emberAnim.css({opacity:this.opacity});
+              }, complete:function(){
+                $({'r':255,'g':0,'b':0}).animate({'r':0,'g':0,'b':255},{queue:false,duration:1000, easing:'swing',
+                  step: function(now) {
+                      emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
+                      emberAnim.css({opacity:this.opacity});
+                  }, complete:function(){
+                      //loop here 
+                      console.log('restart');
+                      runColorsAnm();
+                  } //NEXT-SUB-SEQUENCE-.
+                });
+              } //NEXT-SUB-SEQUENCE-.
+            });
+          } //NEXT-SUB-SEQUENCE-.
+        });
+        
+        };//endloop
+
+        runColorsAnm(); //iife immediately invoked function event
+        </script>
+
+
+
+    <main role="main" class="site">
+
+        <div class="avatar-container">
+            <img class="avatar" src="https://image.shutterstock.com/image-vector/man-sitting-on-office-chair-450w-434344822.jpg">
+        </div>
+
+        <nav role="navigation">
+            <a>Home</a>
+            <a>About Me</a>
+            <a>Projects</a>
+            <a>Contact Me</a>
+        </nav>
+
+        <section class="profile-header">
+            <h1><span class="good-day">Good day, </span>The name's David. I'm a Full Stack Developer with an avid pursuit for knowledge.</h1>
+        </section>
+
+        <section class="bio">
+            <h2>Bio:</h2>
+            <p>I am a current student of Thinkful's Full Stack Web Dev. Engineering Program. I have an intrepid and insatiable magnetism for what drives our collective ascension as people. I find that the world is as much connected by code as it is by words and thought.</p>
+        </section>
+
+        <section class="">
+            <h2 class="le-projects">Le' Projects
+
+              <!--this is the CLOUD anim svg-->
+            <svg class="clouds" preserveAspectRatio="xMidYMid" viewBox="0 0 100 100" width="100%"
+              xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0 18)">
+                <path ng-attr-fill="{{config.c1}}"
+                  d="M53.2,30.3c0.4-1.3,0.6-2.7,0.6-4.2c0-1.2-0.1-2.3-0.4-3.4c-1.5-6-7-10.5-13.5-10.5 c-5.3,0-9.9,3-12.3,7.4c-0.9-0.3-1.8-0.4-2.8-0.4c-5.1,0-9.3,4.1-9.3,9.3c0,0.6,0.1,1.3,0.2,1.9c-4.7,0.7-8.3,4.8-8.3,9.7 c0,5.4,4.4,9.8,9.8,9.8h34.2c3.8,0,7.1-2.2,8.8-5.4c0.7-1.3,1.1-2.9,1.1-4.5C61.4,35.2,57.8,31.1,53.2,30.3z"
+                  fill="rgba(71.4657258064516%,71.4657258064516%,71.4657258064516%,0.513)"
+                  transform="translate(2.74606 0)">
+                  <animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0" keyTimes="0;0.5;1"
+                    ng-attr-dur="{{config.speed1}}" repeatCount="indefinite" calcMode="spline"
+                    keySplines="0.5 0 0.5 1;0.5 0 0.5 1" dur="5">
+                  </animateTransform>
+                </path>
+
+                <defs>
+                  <path id="cpp"
+                    d="M0,0v100h100V0H0z M62.9,44.4c-1.7,3.4-5.3,5.8-9.4,5.8H17c-5.8,0-10.5-4.7-10.5-10.5 c0-5.2,3.8-9.6,8.9-10.4c-0.1-0.6-0.2-1.3-0.2-2c0-5.5,4.4-9.9,9.9-9.9c1,0,2,0.2,3,0.5c2.5-4.7,7.4-7.9,13.1-7.9 c6.9,0,12.8,4.8,14.4,11.2c0.3,1.2,0.4,2.4,0.4,3.6c0,1.6-0.2,3.1-0.7,4.5c5,0.8,8.7,5.2,8.7,10.3C64,41.3,63.6,43,62.9,44.4z"
+                    transform="translate(2.74606 0)">
+                    <animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0"
+                      keyTimes="0;0.5;1" ng-attr-dur="{{config.speed1}}" repeatCount="indefinite" calcMode="spline"
+                      keySplines="0.5 0 0.5 1;0.5 0 0.5 1" dur="5">
+                    </animateTransform>
+                  </path>
+
+                  <clipPath id="cp">
+                    <use href="#cpp">
+                    </use>
+                  </clipPath>
+                </defs>
+
+                <g clip-path="url(#cp)">
+                  <path ng-attr-fill="{{config.c2}}"
+                    d="M84.9,28.9c0.4-1.1,0.6-2.3,0.6-3.5c0-1-0.1-1.9-0.4-2.8 c-1.3-5-6.1-8.7-11.8-8.7c-4.6,0-8.7,2.5-10.7,6.1c-0.8-0.2-1.6-0.4-2.4-0.4c-4.5,0-8.1,3.4-8.1,7.6c0,0.5,0.1,1,0.2,1.5 c-4.1,0.6-7.2,4-7.2,8c0,4.5,3.8,8.1,8.6,8.1h29.8c3.3,0,6.2-1.8,7.7-4.4c0.6-1.1,0.9-2.3,0.9-3.7C92,32.9,88.9,29.6,84.9,28.9z"
+                    fill="rgba(88.23991935483872%,88.23991935483872%,88.23991935483872%,0.672)"
+                    transform="translate(-0.804338 0)">
+                    <animateTransform attributeName="transform" type="translate" values="-3 0;3 0;-3 0"
+                      keyTimes="0;0.5;1" ng-attr-dur="{{config.speed2}}" repeatCount="indefinite" calcMode="spline"
+                      keySplines="0.5 0 0.5 1;0.5 0 0.5 1" dur="3.3000000000000003">
+                    </animateTransform>
+                  </path>
+                </g>
+              </g>
+            </svg>
+
+
+</h2>
+
+
+
+
+
+
+
+            
+            <div class="animal-quiz" style="
+    border: white solid;
+    border-radius: 25px;
+">
+                <h3 class="app-title" style="
+    /* font-weight: 700; */
+    font-size: 1.8rem;
+">"Animal Quiz"</h3>
+                <h4 class="date">2019</h4>
+                <container class="screens">
+                    <img class="screenshot" src="images\shot2.png">
+                    <img class="screenshot" src="images\shot1.png">
+                </container>
+                <h4>Description</h4>
+                <p>A Short and simple quiz application that tests your knowledge of random, strange, and little-known animal facts. The app boasts a cartoon jungle background with a score keeper and “current question” indicator. The user is presented with 4 multiple choice questions and a related image. After answering, each question is provided feedback with the correct answer. At the end, depending on the user’s score, a final score screen is shown with a specific “emblem” to match the user’s ranking as well as a Try Again button.</p>
+                <p class="quiz-spec">Created using: *HTML5, *CSS, *jQuery, *Javascript</p>
+                <p class="quiz-spec">Check it out here! ---&gt; <a href="https://acosta816.github.io/Animal-Quiz-App/">Animal Quiz App</a></p>
+                
             </div>
+    <hr>
+            <footer>
+                <h3>Lets connect</h3>
+                <a>email</a>
+                <a>github</a>
+                <a>code pen</a>
+            </footer>
+        </section>
+       
+            
+
+    </main>
     
-            <nav role="navigation">
-                <a>Home</a>
-                <a>About Me</a>
-                <a>Projects</a>
-                <a>Contact Me</a>
-            </nav>
+
+
+
+
+
     
-            <section class="profile-header">
-                <h1><span class="good-day">Good day, </span>The name's David. I'm a Full Stack Developer with an avid pursuit for knowledge.</h1>
-            </section>
-    
-            <section class="bio">
-                <h2>Bio:</h2>
-                <p>I am a current student of Thinkful's Full Stack Web Dev. Engineering Program. I have an intrepid and insatiable magnetism for what drives our collective ascension as people. I find that the world is as much connected by code as it is by thoughts, chatter, and matter.  I'd like to help taylor that fabric and create for others the seams that connect us currently and have the world grow well beyond the physical limits and into an ever-expansive fabric that houses our greatest creative endeavours, our thoughts archived, our dreams realized and our hopes yet to be.  No but seriously, I love coding and building. I like people and working with. The chances to improve are always there, and I'm always looking.</p>
-            </section>
-    
-            <section class="">
-                <h2 class="le-projects">Le' Projects</h2>
-                
-                <div class="animal-quiz" style="
-        border: white solid;
-        border-radius: 25px;
-    ">
-                    <h3 class="app-title" style="
-        /* font-weight: 700; */
-        font-size: 1.8rem;
-    ">"Animal Quiz"</h3>
-                    <h4 class="date">2019</h4>
-                    <container class="screens">
-                        <img class="screenshot" src="images\shot2.png">
-                        <img class="screenshot" src="images\shot1.png">
-                    </container>
-                    <h4>Description</h4>
-                    <p>A Short and simple quiz application that tests your knowledge of random, strange, and little-known animal facts. The app boasts a cartoon jungle background with a score keeper and “current question” indicator. The user is presented with 4 multiple choice questions and a related image. After answering, each question is provided feedback with the correct answer. At the end, depending on the user’s score, a final score screen is shown with a specific “emblem” to match the user’s ranking as well as a Try Again button.</p>
-                    <p>Created using: *HTML5, *CSS, *jQuery, *Javascript</p>
-                    <p>Check it out here! ---&gt; <a href="https://acosta816.github.io/Animal-Quiz-App/">Animal Quiz App</a></p>
-                    
-                </div>
-        <hr>
-                <footer>
-                    <h3>Lets connect</h3>
-                    <a>email</a>
-                    <a>github</a>
-                    <a>code pen</a>
-                </footer>
-            </section>
-           
-                
-    
-        </main>
-        
-    
-    
-    
-    
-    
-        
-    </body>
-    
-    </html>
-    
-    
-    
+
+
+
+
+
+</body></html>
+
+
