@@ -28,8 +28,8 @@
               <feGaussianBlur stdDeviation="1"></feGaussianBlur>
             </filter>
 
-
-            <filter id="red-glow" filterUnits="userSpaceOnUse"
+<!--GLOW EFFECT FILTER-->
+            <filter id="red-glow" filterUnits="userSpaceOnUse"  
             x="-50%" y="-50%" width="200%" height="200%">
        <!-- blur the text at different levels-->
       <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur5"/>
@@ -47,9 +47,9 @@
       <!-- recolour the merged blurs red-->
       <feColorMatrix result="red-blur" in="blur-merged" type="matrix"
                      values="1 0 0 0 0
-                             0 0.06 0 0 0
-                             0 0 0.44 0 0
-                             0 0 0 1 0" />
+                             1 0.01 0 0 1
+                             0 0 0 0 0
+                             0.05 0.08 0.02 5 0" />
       <feMerge>
         <feMergeNode in="red-blur"/>       <!-- largest blurs coloured red -->
         <feMergeNode in="blur5"/>          <!-- smallest blur left white -->
@@ -63,19 +63,25 @@
 
           </defs>
         
-          <circle id="testBubble" cx="1764.232509159011" cy="0" transform="translate(0 870.628)" r="36.58274441974682" fill="#ddeeff" opacity="0.36800000000000005">
+          <circle class="testBubble" cx="1764.232509159011" cy="0" transform="translate(0 870.628)" r="8" fill="#ddeeff" opacity="0.36800000000000005">
             <animateTransform attributeName="transform" type="translate" begin="-4.271294670280647s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 924.5827444197469;0 -36.58274441974682"></animateTransform>
-          </circle><circle cx="1485.5958598834236" cy="0" transform="translate(0 117.017)" r="21.438466416902223" fill="#bbddff" opacity="0.322">
+          </circle>
+          <circle cx="1485.5958598834236" cy="0" transform="translate(0 117.017)" r="5" fill="#bbddff" opacity="0.322">
             <animateTransform attributeName="transform" type="translate" begin="-5.743032400581409s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 909.4384664169022;0 -21.438466416902223"></animateTransform>
-          </circle><circle cx="1530.1635428704237" cy="0" transform="translate(0 819.205)" r="31.156222292978573" fill="#aabbcc" opacity="0.36800000000000005">
+          </circle>
+          <circle  cx="1530.1635428704237" cy="0" transform="translate(0 819.205)" r="6" fill="#aabbcc" opacity="0.36800000000000005">
             <animateTransform attributeName="transform" type="translate" begin="-4.598249983008675s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 919.1562222929786;0 -31.156222292978573"></animateTransform>
-          </circle><circle cx="973.5196857086279" cy="0" transform="translate(0 719.461)" r="18.420305080768912" fill="#ddeeff" opacity="0.18400000000000002">
+          </circle>
+          <circle class="testBubble" cx="973.5196857086279" cy="0" transform="translate(0 719.461)" r="4" fill="#ddeeff" opacity="0.18400000000000002">
             <animateTransform attributeName="transform" type="translate" begin="-1.2734481741151213s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 906.4203050807689;0 -18.420305080768912"></animateTransform>
-          </circle><circle cx="1083.5557354676364" cy="0" transform="translate(0 476.611)" r="23.27029147153026" fill="#aabbcc" opacity="0.322">
+          </circle>
+          <circle cx="1083.5557354676364" cy="0" transform="translate(0 476.611)" r="5" fill="#aabbcc" opacity="0.322">
             <animateTransform attributeName="transform" type="translate" begin="-1.8814476581790405s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 911.2702914715303;0 -23.27029147153026"></animateTransform>
-          </circle><circle cx="250.19829665568565" cy="0" transform="translate(0 370.247)" r="27.5741100180322" fill="#aabbcc" opacity="0.322">
+          </circle >
+          <circle cx="250.19829665568565" cy="0" transform="translate(0 370.247)" r="7" fill="#aabbcc" opacity="0.322">
             <animateTransform attributeName="transform" type="translate" begin="-3.0123881848729637s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 915.5741100180322;0 -27.5741100180322"></animateTransform>
-          </circle><circle cx="1749.5115423785578" cy="0" transform="translate(0 125.247)" r="13.157957681255358" fill="#bbddff" opacity="0.18400000000000002">
+          </circle>
+          <circle cx="1749.5115423785578" cy="0" transform="translate(0 125.247)" r="4" fill="#bbddff" opacity="0.18400000000000002">
             <animateTransform attributeName="transform" type="translate" begin="-14.202892945155078s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.1579576812553;0 -13.157957681255358"></animateTransform>
           </circle>
         </g>
@@ -84,24 +90,27 @@
 
 <script>
 
-    var emberAnim = $('#testBubble');
+    var emberAnim = $('.testBubble');
 
         function runColorsAnm(){
-
-        $({'r':0,'g':102,'b':0, opacity:0.1}).animate({'r':255,'g':60,'b':0, opacity: 0.5},{queue:false,duration:1000, easing:'swing',
+                      //orange to blood orange slowly then to white flash large radius, then back down to 
+        $({'r':255,'g':165,'b':165, opacity:0.4 }).animate({'r':255,'g':255,'b':43, opacity: 0.7 },{queue:false,duration:4000, easing:'swing',
           step: function(now) {
             emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
             emberAnim.css({opacity:this.opacity});
+            // emberAnim.css({r:this.r});
           }, complete:function(){
-            $({'r':255,'g':255,'b':255, opacity: 0.2}).animate({'r':255,'g':0,'b':0, opacity: 0.9},{queue:false,duration:2000, easing:'swing',
+            $({'r':255,'g':161,'b':67, opacity: 0.3}).animate({'r':255,'g':255,'b':255, opacity: 1.0, r: 60},{queue:false,duration:100, easing:'swing',
               step: function(now) {
                   emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
                   emberAnim.css({opacity:this.opacity});
+                  // emberAnim.css({r:this.r});
               }, complete:function(){
-                $({'r':255,'g':0,'b':0}).animate({'r':0,'g':0,'b':255},{queue:false,duration:1000, easing:'swing',
+                $({'r':255,'g':255,'b':43, opacity: 0.3}).animate({'r':255,'g':165,'b':165, opacity: 0.2},{queue:false,duration:3000, easing:'swing',
                   step: function(now) {
                       emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
                       emberAnim.css({opacity:this.opacity});
+                      // emberAnim.css({r:this.r});
                   }, complete:function(){
                       //loop here 
                       console.log('restart');

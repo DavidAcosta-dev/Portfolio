@@ -21,7 +21,7 @@ body {
 
 .bubbles {
     background:#00428400;
-    z-index:1;
+    z-index:-1;
     position: absolute;
     width: 100%;
     height: 200%;
@@ -30,10 +30,13 @@ body {
 .clouds {
     z-index: -1;
     position: absolute;
+    width:100%;
+    display: none;
 }
 
 circle {
     filter: url(#red-glow);
+    /* r: 4; */
 }
 
 
