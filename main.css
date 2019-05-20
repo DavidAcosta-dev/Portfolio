@@ -31,6 +31,12 @@ body {
     height: 100%;
 }
 
+.cloudName {
+    position: absolute;
+    width:30%;
+    left:60%;
+}
+
 .clouds {
     z-index: -1;
     position: absolute;
