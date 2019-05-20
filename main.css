@@ -1,22 +1,26 @@
 * {
     box-sizing: border-box;
     color: white;
-    /* border: 1px solid yellow; */
+    /* border: 1px solid yellow; */  
   }
+
 
 body {
     margin: 0;
     padding: 0;
     display: flex;
     font-family: 'Comfortaa', cursive; 
-    background-image: url("https://art4clip.com/images/campfire-clipart-animated-gif-20.gif"), url("https://www.pngkey.com/png/full/765-7653840_euclidean-vector-angle-forest-night-free-frame-clipart.png"),
+    background-image: url("https://art4clip.com/images/campfire-clipart-animated-gif-20.gif"), 
+                      url("https://www.pngkey.com/png/full/765-7653840_euclidean-vector-angle-forest-night-free-frame-clipart.png"),
+                      url("https://media.giphy.com/media/xB2huFLKz1SeMFO4w2/giphy.gif"),
+                      url("https://media.giphy.com/media/xB2huFLKz1SeMFO4w2/giphy.gif"),
                       url("https://i.redd.it/1htvyw5zhum11.png");
-    background-position: bottom, bottom , top;
-    background-repeat:no-repeat, no-repeat, repeat;
-    background-size: 30%, auto 80%, auto;
+    background-position: bottom, bottom ,top left, center right, top;
+    background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-size: 30%, auto 80%, 15%, 10%, auto;
     text-align: center;
     line-height: 1.5;
-     
+    background-attachment: scroll, scroll, fixed, fixed, fixed;
 }
 
 .bubbles {
@@ -24,14 +28,14 @@ body {
     z-index:-1;
     position: absolute;
     width: 100%;
-    height: 200%;
+    height: 100%;
 }
 
 .clouds {
     z-index: -1;
     position: absolute;
-    width:100%;
-    display: none;
+    width:30%;
+    left:40%;
 }
 
 circle {
@@ -73,13 +77,35 @@ nav a {
     color: white;
 }
 
-a:hover {
-    color:#d6ecff;
-    text-shadow: 0 0 10px #ffffff;
+a:hover, #linkedIn:hover,#emailLink:hover,#gitHub:hover {
+    color:#ffffff;
+    text-shadow: 0 0 20px #ffffff;
     cursor: pointer;
 }
 
+#linkedIn {
+    text-shadow: 0px 1px 20px #000000;
+    color: #ffffff;
+    background-color: #0075ffb0;
+    border-radius: 20px;
+    box-shadow: 0px -20px 20px 0px black;
+}
 
+#gitHub {
+    text-shadow: 0px 1px 20px #000000;
+    color: #ffffff;
+    background-color: #00ff2a57;
+    border-radius: 20px;
+    box-shadow: 0px -20px 20px 0px black;
+}
+
+#emailLink {
+    text-shadow: 0px 1px 20px #000000;
+    color: #ffffff;
+    background-color: #ff000057;
+    border-radius: 20px;
+    box-shadow: 0px -20px 20px 0px black;
+}
 
 hr {
         border-radius: 100%;
@@ -92,14 +118,37 @@ hr {
 
 footer h3{
     text-align:center;
+    
 }
 footer {
+    position: relative;
     margin-top: 150px;
 }
 
 footer a {
     padding-left: 10px;
-    padding-right: 10px
+    padding-right: 10px;
+    font-size: 1.5rem;
+}
+
+.contactLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+picture {
+    display:flex;
+    flex-direction: column;
+}
+
+.marsh {
+    width: 30%;
+    z-index: -1;
+}
+
+.gmail, .linkedIn, .gitHub{
+    align-self: center;
 }
 
 .avatar-container{
@@ -134,6 +183,11 @@ footer a {
     padding-right: 12px; 
 }
 
+.animal-quiz * {
+    background-color: #1c3e527a;
+    border-radius: 13px
+}
+
 .quiz-spec {
     font-size: 12px;
     color:#ffed94
@@ -146,8 +200,9 @@ footer a {
 .bio {
     border-radius: 13px;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.61);
     padding: 12px;
+    box-shadow: 0 0 16px 5px #f5f1f1;
 }
 
 .bio h2 {
@@ -196,10 +251,10 @@ p, h3, h4 {
 
 .app-title {
     text-align: center;
-    /* font-weight: 800; */
     text-decoration: underline;
-    color: rgb(0, 99, 0);
-    font-size: x-large;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-shadow: 2px 2px 7px black;
 }
 
 .date {
@@ -220,6 +275,22 @@ p, h3, h4 {
     p {
         font-size: 1.25rem;
     }
+
+    .le-projects{
+        font-size: 3rem;
+    }
+
+    .app-title {
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+        font-size: 2.5rem;
+    }
+
+    .quiz-spec, .quiz-spec a {
+        font-size: 0.9rem;
+    }
+
     h1 {
         font-size: 1.5rem;
     }
@@ -238,6 +309,11 @@ p, h3, h4 {
         margin-bottom: 0px; 
     }
 
+    .clouds {
+        top:-100px;
+        width:50%;
+        left:40%;
+    }
     
 }
 
@@ -249,6 +325,21 @@ p, h3, h4 {
         font-size: 1.5rem;
         line-height:1.5;
         text-align: left;
+    }
+
+    .le-projects{
+        font-size: 3.5rem;
+    }
+
+    .app-title {
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+    }
+
+    .quiz-spec, .quiz-spec a  {
+        font-size: 1.1rem;
     }
 
      .screens img {
@@ -267,6 +358,12 @@ p, h3, h4 {
         margin-bottom: 50px;
         
     }
+
+    footer h3{
+        font-size: 2.5rem;
+    }
+
+    
 }
 
 

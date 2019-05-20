@@ -13,8 +13,13 @@
 
 </head>
 
+
 <body>
 
+
+  
+
+    <!-- This is the embers svg I created with full matrix color tweakability >:) -->
     <svg  class="bubbles" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 888">
         <g transform="">
           <defs>
@@ -28,7 +33,7 @@
               <feGaussianBlur stdDeviation="1"></feGaussianBlur>
             </filter>
 
-<!--GLOW EFFECT FILTER-->
+    <!--GLOW EFFECT FILTER-->
             <filter id="red-glow" filterUnits="userSpaceOnUse"  
             x="-50%" y="-50%" width="200%" height="200%">
        <!-- blur the text at different levels-->
@@ -90,41 +95,7 @@
 
 <script>
 
-    var emberAnim = $('.testBubble');
-
-        function runColorsAnm(){
-                      //orange to blood orange slowly then to white flash large radius, then back down to 
-        $({'r':255,'g':165,'b':165, opacity:0.4 }).animate({'r':255,'g':255,'b':43, opacity: 0.7 },{queue:false,duration:4000, easing:'swing',
-          step: function(now) {
-            emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
-            emberAnim.css({opacity:this.opacity});
-            // emberAnim.css({r:this.r});
-          }, complete:function(){
-            $({'r':255,'g':161,'b':67, opacity: 0.3}).animate({'r':255,'g':255,'b':255, opacity: 1.0, r: 60},{queue:false,duration:100, easing:'swing',
-              step: function(now) {
-                  emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
-                  emberAnim.css({opacity:this.opacity});
-                  // emberAnim.css({r:this.r});
-              }, complete:function(){
-                $({'r':255,'g':255,'b':43, opacity: 0.3}).animate({'r':255,'g':165,'b':165, opacity: 0.2},{queue:false,duration:3000, easing:'swing',
-                  step: function(now) {
-                      emberAnim.css('fill','rgb('+this.r+','+this.g+','+this.b+')');
-                      emberAnim.css({opacity:this.opacity});
-                      // emberAnim.css({r:this.r});
-                  }, complete:function(){
-                      //loop here 
-                      console.log('restart');
-                      runColorsAnm();
-                  } //NEXT-SUB-SEQUENCE-.
-                });
-              } //NEXT-SUB-SEQUENCE-.
-            });
-          } //NEXT-SUB-SEQUENCE-.
-        });
-        
-        };//endloop
-
-        runColorsAnm(); //iife immediately invoked function event
+    
         </script>
 
 
@@ -136,22 +107,22 @@
         </div>
 
         <nav role="navigation">
-            <a>Home</a>
-            <a>About Me</a>
-            <a>Projects</a>
-            <a>Contact Me</a>
+            <a href="#">Home</a>
+            <a href="#bio">About Me</a>
+            <a href="#projectsTarget">Projects</a>
+            <a href="#contactMe">Contact Me</a>
         </nav>
 
         <section class="profile-header">
             <h1><span class="good-day">Good day, </span>The name's David. I'm a Full Stack Developer with an avid pursuit for knowledge.</h1>
         </section>
 
-        <section class="bio">
+        <section id="bio" class="bio">
             <h2>Bio:</h2>
             <p>I am a current student of Thinkful's Full Stack Web Dev. Engineering Program. I have an intrepid and insatiable magnetism for what drives our collective ascension as people. I find that the world is as much connected by code as it is by words and thought.</p>
         </section>
 
-        <section class="">
+        <section>
             <h2 class="le-projects">Le' Projects
 
               <!--this is the CLOUD anim svg-->
@@ -208,13 +179,11 @@
 
 
             
-            <div class="animal-quiz" style="
+            <div id="projectsTarget" class="animal-quiz" style="
     border: white solid;
     border-radius: 25px;
 ">
-                <h3 class="app-title" style="
-    /* font-weight: 700; */
-    font-size: 1.8rem;
+                <h3 class="app-title"
 ">"Animal Quiz"</h3>
                 <h4 class="date">2019</h4>
                 <container class="screens">
@@ -224,15 +193,30 @@
                 <h4>Description</h4>
                 <p>A Short and simple quiz application that tests your knowledge of random, strange, and little-known animal facts. The app boasts a cartoon jungle background with a score keeper and “current question” indicator. The user is presented with 4 multiple choice questions and a related image. After answering, each question is provided feedback with the correct answer. At the end, depending on the user’s score, a final score screen is shown with a specific “emblem” to match the user’s ranking as well as a Try Again button.</p>
                 <p class="quiz-spec">Created using: *HTML5, *CSS, *jQuery, *Javascript</p>
-                <p class="quiz-spec">Check it out here! ---&gt; <a href="https://acosta816.github.io/Animal-Quiz-App/">Animal Quiz App</a></p>
+                <p class="quiz-spec">Check it out here! ---&gt; <a href="https://acosta816.github.io/Animal-Quiz-App/" target="_blank">Animal Quiz App</a></p>
                 
             </div>
     <hr>
-            <footer>
+            <footer role="region">
                 <h3>Lets connect</h3>
-                <a>email</a>
-                <a>github</a>
-                <a>code pen</a>
+
+                <div id="contactMe" class="contactLinks">
+                <picture>
+                    <a id="emailLink" href="mailto:Acosta816@gmail.com?subject=HireMe?">Email</a>
+                    <img class="marsh gmail" src="images\marsh2.png">
+                    
+                </picture>
+                <picture>
+                    <a id="linkedIn" href="https://www.linkedin.com/in/david-acosta-aab06b182/" target="_blank">LinkedIn</a>
+                    <img class="marsh linkedIn" src="images\marsh3.png">
+                </picture>
+
+                <picture>
+                    <a id="gitHub" href="https://github.com/Acosta816" target="_blank">GitHub</a>
+                    <img class="marsh gitHub" src="images\marsh1.png">
+                </picture>
+              </div>
+
             </footer>
         </section>
        
@@ -250,7 +234,9 @@
 
 
 
+<script src="index.js"></script>
+</body>
 
-</body></html>
+</html>
 
 
