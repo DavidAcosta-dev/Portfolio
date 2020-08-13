@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    font-family: 'Comfortaa', cursive; 
+    font-family: monospace;
     background-image: url("https://art4clip.com/images/campfire-clipart-animated-gif-20.gif"), 
                       url("https://www.pngkey.com/png/full/765-7653840_euclidean-vector-angle-forest-night-free-frame-clipart.png"),
                       url("https://media.giphy.com/media/xB2huFLKz1SeMFO4w2/giphy.gif"),
@@ -169,7 +169,7 @@ picture {
 }
 
 .avatar {
-    
+    z-index: -10;
     border-radius: 100%;
     max-width: 200px;
     max-height: 200px;
@@ -232,6 +232,7 @@ picture {
     text-shadow: 0 0 7px #f5f1f1;
     display: block;
     text-align: left;
+    font-weight: 100;
     
 }
 
