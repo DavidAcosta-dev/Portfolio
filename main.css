@@ -80,6 +80,7 @@ nav a {
     line-height: 1.5;
     margin-left: 5px;
     margin-right: 5px;
+    font-size: 1.2rem;
     /* border: 1px solid red; */
     color: white;
 }
@@ -190,7 +191,17 @@ picture {
     padding-right: 12px; 
 }
 
+.burger-app {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .animal-quiz * {
+    background-color: #1c3e527a;
+    border-radius: 13px
+}
+
+.burger-app * {
     background-color: #1c3e527a;
     border-radius: 13px
 }
@@ -217,13 +228,22 @@ picture {
     text-shadow: 0 0 7px #f5f1f1;
 }
 
-.screenshot{
+.screenshot {
     border: 3px solid #000000c4;
     border-radius:13px;
     box-shadow:0 0 15px #10242f;
     width:100%;
     height: auto;
     margin-bottom: 5px
+}
+
+.screenshot2 {
+    border: 3px solid #000000c4;
+    border-radius:13px;
+    box-shadow:0 0 15px #10242f;
+    width:75%;
+    height: auto;
+    margin-bottom: 5px;
 }
 
 .good-day {
@@ -273,11 +293,21 @@ p, h3, h4 {
         display:flex;
         flex-flow: column;
     }
+    
+.screens2  {
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+}
 
 
 @media(min-width:600px){
     main {
         padding: 60px;
+    }
+
+    .animal-quiz {
+        padding: 30px
     }
 
     p {
@@ -355,7 +385,19 @@ p, h3, h4 {
         width: 50%;
         height: 50%;
     }
-    .screens{
+
+    .screens2 img {
+        display: inline-block;
+        width: 25%;
+        height: auto;
+    }
+
+    .screens {
+        flex-direction:row;
+    }
+
+    .screens2 {
+        justify-content: center;
         flex-direction:row;
     }
 
@@ -372,6 +414,12 @@ p, h3, h4 {
     }
 
     
+}
+
+@media(min-width:1200px){
+    main {
+        padding: 250px;
+    }
 }
 
 
