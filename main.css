@@ -16,6 +16,7 @@
   position: relative;
   transform-origin: 50% 0;
   animation: moveIt 2.5s ease-in-out infinite;
+  z-index: -2;
 }
 
 /* .thread:after {
@@ -504,7 +505,7 @@ footer a {
 
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   main {
     padding: 250px;
   }
@@ -513,8 +514,16 @@ footer a {
     width: 200px;
   }
 
+  picture a {
+    margin-bottom: 200px;
+}
+
   body {
     background-size: 45%, auto 80%, 15%, 10%, auto;
+  }
+
+  footer {
+      margin-bottom: -252px;
   }
 
 }
