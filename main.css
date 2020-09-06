@@ -1,426 +1,471 @@
 * {
-    box-sizing: border-box;
-    color: white;
-    /* border: 1px solid yellow; */  
-  }
+  box-sizing: border-box;
+  color: white;
+  /* border: 1px solid yellow; */
+}
 
+/* swinging leg animation */
+.thread {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 69px;
+  height: 83px;
+  background-size: contain;
+  border-radius: 5px;
+  position: relative;
+  transform-origin: 50% 0;
+  animation: moveIt 2.5s ease-in-out infinite;
+}
+
+/* .thread:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: red;
+  border: 2px solid white;
+  top: -4.5px;
+  left: -3.5px;
+} */
+
+
+@keyframes moveIt {
+  0%,
+  100% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes moveShade {
+  0% {
+    transform: translateX(-220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+  50% {
+    filter: blur(3px);
+  }
+  100% {
+    transform: translateX(220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+}
+
+/* swinging leg animation */
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-family: monospace;
-    background-image: url("https://art4clip.com/images/campfire-clipart-animated-gif-20.gif"), 
-                      url("https://www.pngkey.com/png/full/765-7653840_euclidean-vector-angle-forest-night-free-frame-clipart.png"),
-                      url("https://media.giphy.com/media/xB2huFLKz1SeMFO4w2/giphy.gif"),
-                      url("https://media.giphy.com/media/xB2huFLKz1SeMFO4w2/giphy.gif"),
-                      url("https://i.redd.it/1htvyw5zhum11.png");
-    background-position: bottom, bottom ,top left, center right, top;
-    background-repeat:no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-    background-size: 30%, auto 80%, 15%, 10%, auto;
-    text-align: center;
-    line-height: 1.5;
-    background-attachment: scroll, scroll, fixed, fixed, fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: monospace;
+  background-image: url("images/campfire-clipart-animated-gif-20.gif"),
+    url("images/vector_forest_background.png"),
+    url("images/twinkle_star.gif"),
+    url("images/twinkle_star.gif"),
+    url("images/nightSkyBackground.png");
+  background-position: bottom, bottom, top left, center right, top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 30%, auto 80%, 15%, 10%, auto;
+  text-align: center;
+  line-height: 1.5;
+  background-attachment: scroll, scroll, fixed, fixed, fixed;
 }
 
 .bubbles {
-    background:#00428400;
-    z-index:-1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  background: #00428400;
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .cloudName {
-    z-index: -1;
-    position: absolute;
-    width:30%;
-    left:60%;
+  z-index: -1;
+  position: absolute;
+  width: 30%;
+  left: 60%;
 }
 
 .clouds {
-    z-index: -1;
-    position: absolute;
-    width:30%;
-    left:40%;
+  z-index: -1;
+  position: absolute;
+  width: 30%;
+  left: 40%;
 }
 
 circle {
-    filter: url(#red-glow);
-    /* r: 4; */
+  filter: url(#red-glow);
+  /* r: 4; */
 }
 
-
-main{
-    flex-flow: column;
-    flex-direction: column;
-    flex-wrap: initial;
-    display: flex;
-    padding: 30px 7px;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-    justify-content: space-between;
+main {
+  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: initial;
+  display: flex;
+  padding: 30px 7px;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 nav {
-    margin-top:30px;
-    background-color:#0088ff1f;
-    border: 1px solid #007eff54;
-    box-shadow: 0 0 7px #d2e0ff;
-    border-radius: 4%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    
-    
+  margin-top: 30px;
+  background-color: #0088ff1f;
+  border: 1px solid #007eff54;
+  box-shadow: 0 0 7px #d2e0ff;
+  border-radius: 4%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 nav a {
-    line-height: 1.5;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 1.2rem;
-    /* border: 1px solid red; */
-    color: white;
+  line-height: 1.5;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  /* border: 1px solid red; */
+  color: white;
 }
 
-a:hover, #linkedIn:hover,#emailLink:hover,#gitHub:hover {
-    color:#ffffff;
-    text-shadow: 0 0 20px #ffffff;
-    cursor: pointer;
+a:hover,
+#linkedIn:hover,
+#emailLink:hover,
+#gitHub:hover {
+  color: #ffffff;
+  text-shadow: 0 0 20px #ffffff;
+  cursor: pointer;
 }
 
 #linkedIn {
-    text-shadow: 0px 1px 20px #000000;
-    color: #ffffff;
-    background-color: #0075ffb0;
-    border-radius: 20px;
-    box-shadow: 0px -20px 20px 0px black;
+  text-shadow: 0px 1px 20px #000000;
+  color: #ffffff;
+  background-color: #0075ffb0;
+  border-radius: 20px;
+  box-shadow: 0px -20px 20px 0px black;
 }
 
 #gitHub {
-    text-shadow: 0px 1px 20px #000000;
-    color: #ffffff;
-    background-color: #00ff2a57;
-    border-radius: 20px;
-    box-shadow: 0px -20px 20px 0px black;
+  text-shadow: 0px 1px 20px #000000;
+  color: #ffffff;
+  background-color: #00ff2a57;
+  border-radius: 20px;
+  box-shadow: 0px -20px 20px 0px black;
 }
 
 #emailLink {
-    text-shadow: 0px 1px 20px #000000;
-    color: #ffffff;
-    background-color: #ff000057;
-    border-radius: 20px;
-    box-shadow: 0px -20px 20px 0px black;
+  text-shadow: 0px 1px 20px #000000;
+  color: #ffffff;
+  background-color: #ff000057;
+  border-radius: 20px;
+  box-shadow: 0px -20px 20px 0px black;
 }
 
 hr {
-        border-radius: 100%;
-        background-color: #ffffff;
-        width: 100%;
-        height: .2rem;
-        margin-top: 5%;
-        box-shadow: 0 0 7px #f5f1f1;
-    }
+  border-radius: 100%;
+  background-color: #ffffff;
+  width: 100%;
+  height: 0.2rem;
+  margin-top: 5%;
+  box-shadow: 0 0 7px #f5f1f1;
+}
 
-footer h3{
-    text-align:center;
-    
+footer h3 {
+  text-align: center;
 }
 footer {
-    position: relative;
-    margin-top: 150px;
+  position: relative;
+  margin-top: 150px;
 }
 
 footer a {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.5rem;
 }
 
 .contactLinks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 picture {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .marsh {
-    width: 30%;
-    z-index: -1;
+  width: 30%;
+  z-index: -1;
 }
 
-.gmail, .linkedIn, .gitHub{
-    align-self: center;
+.gmail,
+.linkedIn,
+.gitHub {
+  align-self: center;
 }
 
-.avatar-container{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 200px;
-    max-height: 200px;
-    min-width: 30px;
-    min-height: 30px;
+.avatar-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .avatar {
-    z-index: -10;
-    border-radius: 100%;
-    max-width: 200px;
-    max-height: 200px;
-    min-width: 30px;
-    min-height: 30px;
+  z-index: -10;
+  border-radius: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 30px;
+  min-height: 30px;
 
-    box-shadow:0 0 15px #f5f1f1, inset -40px 0px 0px #d8e8f7,
-     inset 50px 0px 0px #ffffff, 
-     inset 68px 0px 0px 35px #e2eefa, 
-     0px 0px 0px 20px rgba(255, 255, 255, 0.05), 
-     0px 0px 0px 51px rgba(255, 255, 255, 0.034), 
-     0px 0px 0px 74px rgba(255, 255, 255, 0.04);
-  
+  box-shadow: 0 0 15px #f5f1f1, inset -40px 0px 0px #d8e8f7,
+    inset 50px 0px 0px #ffffff, inset 68px 0px 0px 35px #e2eefa,
+    0px 0px 0px 20px rgba(255, 255, 255, 0.05),
+    0px 0px 0px 51px rgba(255, 255, 255, 0.034),
+    0px 0px 0px 74px rgba(255, 255, 255, 0.04);
 }
 
 .animal-quiz {
-    padding-left: 12px;
-    padding-right: 12px; 
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .burger-app {
-    padding-left: 12px;
-    padding-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .animal-quiz * {
-    background-color: #1c3e527a;
-    border-radius: 13px
+  background-color: #1c3e527a;
+  border-radius: 13px;
 }
 
 .burger-app * {
-    background-color: #1c3e527a;
-    border-radius: 13px
+  background-color: #1c3e527a;
+  border-radius: 13px;
 }
 
 .quiz-spec {
-    font-size: 12px;
-    color:#ffed94
+  font-size: 12px;
+  color: #ffed94;
 }
 .quiz-spec a {
-    font-size: 12px;
-    color:#ff7500;
+  font-size: 12px;
+  color: #ff7500;
 }
 
 .bio {
-    border-radius: 13px;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.61);
-    padding: 12px;
-    box-shadow: 0 0 16px 5px #f5f1f1;
+  border-radius: 13px;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.61);
+  padding: 12px;
+  box-shadow: 0 0 16px 5px #f5f1f1;
 }
 
 .bio h2 {
-    text-align: left;
-    text-shadow: 0 0 7px #f5f1f1;
+  text-align: left;
+  text-shadow: 0 0 7px #f5f1f1;
 }
 
 .screenshot {
-    border: 3px solid #000000c4;
-    border-radius:13px;
-    box-shadow:0 0 15px #10242f;
-    width:100%;
-    height: auto;
-    margin-bottom: 5px
+  border: 3px solid #000000c4;
+  border-radius: 13px;
+  box-shadow: 0 0 15px #10242f;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
 }
 
 .screenshot2 {
-    border: 3px solid #000000c4;
-    border-radius:13px;
-    box-shadow:0 0 15px #10242f;
-    width:75%;
-    height: auto;
-    margin-bottom: 5px;
+  border: 3px solid #000000c4;
+  border-radius: 13px;
+  box-shadow: 0 0 15px #10242f;
+  width: 75%;
+  height: auto;
+  margin-bottom: 5px;
 }
 
 .good-day {
-    font-family: 'Pacifico', cursive;
-    font-size:1.66rem;
-    text-shadow: 0 0 7px #f5f1f1;
-    display: block;
-    text-align: left;
-    font-weight: 100;
-    
+  font-family: "Pacifico", cursive;
+  font-size: 1.66rem;
+  text-shadow: 0 0 7px #f5f1f1;
+  display: block;
+  text-align: left;
+  font-weight: 100;
 }
 
 h1 {
-    font-size: 1.2rem;
-    text-align:center;
+  font-size: 1.2rem;
+  text-align: center;
 }
 h4 {
-    font-size: 1.3rem;
-    text-shadow: 0 0 7px #f5f1f1;
-    margin-bottom: 5px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 7px #f5f1f1;
+  margin-bottom: 5px;
 }
 
-.le-projects{
-    text-align: center;
-    position: relative;
-    font-size: 2.5rem;
-    text-shadow: 0 0 9px #000000;
+.le-projects {
+  text-align: center;
+  position: relative;
+  font-size: 2.5rem;
+  text-shadow: 0 0 9px #000000;
 }
 
-p, h3, h4 {
-    text-align: left;
+p,
+h3,
+h4 {
+  text-align: left;
 }
 
 .app-title {
-    text-align: center;
-    text-decoration: underline;
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    text-shadow: 2px 2px 7px black;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  text-shadow: 2px 2px 7px black;
 }
 
 .date {
+  text-align: center;
+}
+
+.screens {
+  display: flex;
+  flex-flow: column;
+}
+
+.screens2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  main {
+    padding: 60px;
+  }
+
+  .animal-quiz {
+    padding: 30px;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .le-projects {
+    font-size: 3rem;
+  }
+
+  .app-title {
     text-align: center;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+  }
+
+  .quiz-spec,
+  .quiz-spec a {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .good-day {
+    font-family: "Pacifico", cursive;
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+  }
+
+  .clouds {
+    top: -100px;
+    width: 50%;
+    left: 40%;
+  }
 }
 
-.screens  {
-        display:flex;
-        flex-flow: column;
-    }
-    
-.screens2  {
-    display:flex;
-    flex-flow: column;
-    align-items: center;
+@media (min-width: 800px) {
+  main {
+    padding: 80px;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .le-projects {
+    font-size: 3.5rem;
+  }
+
+  .app-title {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+  }
+
+  .quiz-spec,
+  .quiz-spec a {
+    font-size: 1.1rem;
+  }
+
+  .screens img {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+  }
+
+  .screens2 img {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+  }
+
+  .screens {
+    flex-direction: row;
+  }
+
+  .screens2 {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 85px;
+    margin-bottom: 50px;
+  }
+
+  footer h3 {
+    font-size: 2.5rem;
+  }
 }
 
-
-@media(min-width:600px){
-    main {
-        padding: 60px;
-    }
-
-    .animal-quiz {
-        padding: 30px
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
-
-    .le-projects{
-        font-size: 3rem;
-    }
-
-    .app-title {
-        text-align: center;
-        text-decoration: underline;
-        color: rgb(255, 255, 255);
-        font-size: 2.5rem;
-    }
-
-    .quiz-spec, .quiz-spec a {
-        font-size: 0.9rem;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-    .good-day {
-    font-family: 'Pacifico', cursive;
-    font-size:2.2rem;
-
-    }
-
-    h3 {
-        font-size:2rem;
-    }
-
-    h4 {
-        font-size: 1.5rem;
-        margin-bottom: 0px; 
-    }
-
-    .clouds {
-        top:-100px;
-        width:50%;
-        left:40%;
-    }
-    
+@media (min-width: 1200px) {
+  main {
+    padding: 250px;
+  }
 }
-
-@media(min-width:800px){
-    main {
-        padding: 80px;
-    }
-    p {
-        font-size: 1.5rem;
-        line-height:1.5;
-        text-align: left;
-    }
-
-    .le-projects{
-        font-size: 3.5rem;
-    }
-
-    .app-title {
-        text-align: center;
-        text-decoration: underline;
-        color: rgb(255, 255, 255);
-        font-size: 3rem;
-    }
-
-    .quiz-spec, .quiz-spec a  {
-        font-size: 1.1rem;
-    }
-
-     .screens img {
-        display: inline-block;
-        width: 50%;
-        height: 50%;
-    }
-
-    .screens2 img {
-        display: inline-block;
-        width: 25%;
-        height: auto;
-    }
-
-    .screens {
-        flex-direction:row;
-    }
-
-    .screens2 {
-        justify-content: center;
-        flex-direction:row;
-    }
-
-    nav {
-        flex-direction:row;
-        justify-content: space-evenly;
-        margin-top: 85px;
-        margin-bottom: 50px;
-        
-    }
-
-    footer h3{
-        font-size: 2.5rem;
-    }
-
-    
-}
-
-@media(min-width:1200px){
-    main {
-        padding: 250px;
-    }
-}
-
-
-
