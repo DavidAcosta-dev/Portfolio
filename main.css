@@ -69,7 +69,7 @@ body {
     url("images/nightSkyBackground.png");
   background-position: bottom, bottom, top left, center right, top;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-  background-size: 30%, auto 80%, 15%, 10%, auto;
+  background-size: 87%, auto 80%, 15%, 10%, auto;
   text-align: center;
   line-height: 1.5;
   background-attachment: scroll, scroll, fixed, fixed, fixed;
@@ -86,15 +86,17 @@ body {
 .cloudName {
   z-index: -1;
   position: absolute;
-  width: 30%;
-  left: 60%;
+  width: 52%;
+  right: 6px;
+  top: 135px;
 }
 
 .clouds {
   z-index: -1;
   position: absolute;
-  width: 30%;
-  left: 40%;
+  width: 52%;
+  left: -4%;
+  top: -40px;
 }
 
 circle {
@@ -178,10 +180,12 @@ hr {
 
 footer h3 {
   text-align: center;
+  font-size: 28px;
 }
 footer {
   position: relative;
-  margin-top: 150px;
+  margin-top: 99px;
+  margin-bottom: 40px
 }
 
 footer a {
@@ -201,9 +205,17 @@ picture {
   flex-direction: column;
 }
 
+picture a {
+    margin-bottom: 90px;
+}
+
 .marsh {
-  width: 30%;
+  width: 105px;
   z-index: -1;
+}
+
+#linkedIn {
+    margin-bottom: 130px;
 }
 
 .gmail,
@@ -352,6 +364,11 @@ h4 {
   align-items: center;
 }
 
+p {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 @media (min-width: 600px) {
   main {
     padding: 60px;
@@ -389,8 +406,8 @@ h4 {
     font-size: 2.2rem;
   }
 
-  h3 {
-    font-size: 2rem;
+  footer h3 {
+    font-size: 2.7rem;
   }
 
   h4 {
@@ -403,6 +420,19 @@ h4 {
     width: 50%;
     left: 40%;
   }
+
+  picture {
+    width: 33.33%
+}
+
+.marsh {
+    width: 156px;
+}
+
+footer a {
+    font-size: 2.1rem;
+}
+
 }
 
 @media (min-width: 800px) {
@@ -462,10 +492,29 @@ h4 {
   footer h3 {
     font-size: 2.5rem;
   }
+
+  picture {
+      width: 33.33%
+  }
+
+  .marsh {
+      width: 156px;
+  }
+
+
 }
 
 @media (min-width: 1200px) {
   main {
     padding: 250px;
   }
+
+  .marsh {
+    width: 200px;
+  }
+
+  body {
+    background-size: 45%, auto 80%, 15%, 10%, auto;
+  }
+
 }
