@@ -9,8 +9,10 @@
   margin-right: auto;
   margin-left: auto;
   display: block;
-  width: 69px;
-  height: 83px;
+  width: 88px;
+  top: -3px;
+  left: -5px;
+  height: 74px;
   background-size: contain;
   border-radius: 5px;
   position: relative;
@@ -35,10 +37,10 @@
 @keyframes moveIt {
   0%,
   100% {
-    transform: rotate(45deg);
+    transform: rotate(32deg);
   }
   50% {
-    transform: rotate(-45deg);
+    transform: rotate(-27deg);
   }
 }
 
