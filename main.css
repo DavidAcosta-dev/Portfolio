@@ -4,6 +4,179 @@
   /* border: 1px solid yellow; */
 }
 
+/* Hamburger Nav Menu Begins */
+nav {
+  text-align: right;
+  background-color: #a8d6f9;
+  display: flex;
+  margin-top: -30px;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 13px;
+  margin-left: -6px;
+  padding-bottom: 15px;
+  position: fixed;
+  z-index: 100;
+}
+
+nav > h1 {
+  position: absolute;
+  right: 14px;
+  color: black;
+  font-size: 24px;
+  top: -5px;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 6px;
+  left: 11px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #ffc14f;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: rgba(255, 99, 71, 0.931);
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #0c233a;;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  top: 174px;
+  text-align: center;
+  border-radius: 53px;
+  width: 300px;
+  margin: -138px 0 0px -136px;
+  padding-right: 37px;
+  padding-left: 144px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  background: #212950ed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* Hamburger Nav Menu ENDS */
+
+
+
 /* swinging leg animation */
 .thread {
   margin-right: auto;
@@ -108,6 +281,9 @@ circle {
 }
 
 main {
+  padding-top: 0px;
+  padding-left: 7px;
+  padding-right: 7px;
   flex-flow: column;
   flex-direction: column;
   flex-wrap: initial;
@@ -119,25 +295,7 @@ main {
   justify-content: space-between;
 }
 
-nav {
-  margin-top: 30px;
-  background-color: #0088ff1f;
-  border: 1px solid #007eff54;
-  box-shadow: 0 0 7px #d2e0ff;
-  border-radius: 4%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
 
-nav a {
-  line-height: 1.5;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 1.2rem;
-  /* border: 1px solid red; */
-  color: white;
-}
 
 a:hover,
 #linkedIn:hover,
@@ -229,6 +387,7 @@ picture a {
 
 .avatar-container {
   display: flex;
+  margin-top: 124px;
   margin-left: auto;
   margin-right: auto;
   max-width: 200px;
@@ -372,7 +531,41 @@ p {
     padding-right: 8px;
 }
 
+.nav-wide {
+  display: none;
+}
+
 @media (min-width: 600px) {
+
+  nav {
+    display: none;
+  }
+
+  .nav-wide {
+    margin-top: auto;
+    background-color: #a8d6f9;
+    top: 0px;
+    width: 101%;
+    left: 0px;
+    /* border: 1px solid #007eff54; */
+    position: fixed;
+    padding-left: 45px;
+    margin-right: -11px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-wide a {
+  text-decoration: none;
+  line-height: 1.5;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
   main {
     padding: 60px;
   }
@@ -485,12 +678,12 @@ footer a {
     flex-direction: row;
   }
 
-  nav {
+  /* nav {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 85px;
     margin-bottom: 50px;
-  }
+  } */
 
   footer h3 {
     font-size: 2.5rem;
